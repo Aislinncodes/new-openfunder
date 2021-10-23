@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <title>Open Funder</title>
+  </head>
+  <body>
+    <!--Bootstrap Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light banner bg-transparent">
+      <a class="navbar-brand" href="#">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="2.5rem"
+          height="2.5rem"
+          fill="currentColor"
+          class="bi bi-piggy-bank-fill text-primary"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M7.964 1.527c-2.977 0-5.571 1.704-6.32 4.125h-.55A1 1 0 0 0 .11 6.824l.254 1.46a1.5 1.5 0 0 0 1.478 1.243h.263c.3.513.688.978 1.145 1.382l-.729 2.477a.5.5 0 0 0 .48.641h2a.5.5 0 0 0 .471-.332l.482-1.351c.635.173 1.31.267 2.011.267.707 0 1.388-.095 2.028-.272l.543 1.372a.5.5 0 0 0 .465.316h2a.5.5 0 0 0 .478-.645l-.761-2.506C13.81 9.895 14.5 8.559 14.5 7.069c0-.145-.007-.29-.02-.431.261-.11.508-.266.705-.444.315.306.815.306.815-.417 0 .223-.5.223-.461-.026a.95.95 0 0 0 .09-.255.7.7 0 0 0-.202-.645.58.58 0 0 0-.707-.098.735.735 0 0 0-.375.562c-.024.243.082.48.32.654a2.112 2.112 0 0 1-.259.153c-.534-2.664-3.284-4.595-6.442-4.595zm7.173 3.876a.565.565 0 0 1-.098.21.704.704 0 0 1-.044-.025c-.146-.09-.157-.175-.152-.223a.236.236 0 0 1 .117-.173c.049-.027.08-.021.113.012a.202.202 0 0 1 .064.199zm-8.999-.65A6.613 6.613 0 0 1 7.964 4.5c.666 0 1.303.097 1.893.273a.5.5 0 1 0 .286-.958A7.601 7.601 0 0 0 7.964 3.5c-.734 0-1.441.103-2.102.292a.5.5 0 1 0 .276.962zM5 6.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0z"
+          />
+        </svg>
+        Open Funder
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Fund A Wallet</a>
+          </li>
+          <ul class="navbar-nav mx-auto">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search Stock Market"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light ml-2" type="submit">
+              Search
+            </button>
+          </ul>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <a
+            class="nav-link"
+            href="#"
+            onclick="document.getElementById('id01').style.display='block'"
+          >
+            Login
+          </a>
+          <button class="btn btn-primary my-2 my-sm-0 btn-nav" type="submit">
+            Sign Up
+          </button>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Login Modal-->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+      <!--Modal Content-->
+      <form class="modal-content animate" action="">
+        <div class="imgcontainer">
+          <img src="./images/piggy-bank-fill.svg" alt="" />
+        </div>
+        <div class="container">
+          <label for="uname">Username:</label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+          <label for="pword">Password:</label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="pword"
+            required
+          />
+          <button type="submit">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" />
+            Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color: #f1f1f1;">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">
+            Forgot
+            <a href="#">password?</a>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    <!--Call-to-action-->
+    <div class="container-fluid banner p-10">
+      <div class="container p-5 text-center">
+        <h1 class="display-4 font-weight-bold pt-2 my-2">Open Funder</h1>
+        <h5 class="text-black mb-5 banner-subtext">
+          Fund Digital Wallets With Ease.
+          <br />
+          Open an Open Funder Wallet.
+          <br />
+          Safely Receive Funds to Build Your Stock Portfolio
+        </h5>
+        <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-primary" type="button">Open A Wallet</button>
+          <button class="btn btn-primary" type="button">Fund A Wallet</button>
+        </div>
+      </div>
+
+      <!--Bootstrap Cards-->
+      <div class="container p-10 my-5 text-center">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 my-3">
+            <div class="card shadow p-2">
+              <div class="card-body">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2.5rem"
+                  height="2.5rem"
+                  fill="currentColor"
+                  class="bi bi-currency-bitcoin text-primary"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"
+                  />
+                </svg>
+                <h5 class="card-title font-weight-bold mt-2">
+                  Search Stock Market
+                </h5>
+                <p class="card-text text-muted">
+                  Look Up Current Stock Market Prices.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 my-3">
+            <div class="card shadow p-2">
+              <div class="card-body">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2.5rem"
+                  height="2.5rem"
+                  fill="currentColor"
+                  class="bi bi-gem text-primary"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M3.1.7a.5.5 0 0 1 .4-.2h9a.5.5 0 0 1 .4.2l2.976 3.974c.149.185.156.45.01.644L8.4 15.3a.5.5 0 0 1-.8 0L.1 5.3a.5.5 0 0 1 0-.6l3-4zm11.386 3.785-1.806-2.41-.776 2.413 2.582-.003zm-3.633.004.961-2.989H4.186l.963 2.995 5.704-.006zM5.47 5.495 8 13.366l2.532-7.876-5.062.005zm-1.371-.999-.78-2.422-1.818 2.425 2.598-.003zM1.499 5.5l5.113 6.817-2.192-6.82L1.5 5.5zm7.889 6.817 5.123-6.83-2.928.002-2.195 6.828z"
+                  />
+                </svg>
+                <h5 class="card-title font-weight-bold">
+                  Create Invesment Campaign
+                </h5>
+                <p class="card-text text-muted">
+                  Looking to make an investment goal? Wishing family and friends
+                  can chip in. Set up a campaign to share with loved ones to
+                  contribute!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-12 my-3">
+            <div class="card shadow p-2">
+              <div class="card-body">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="2.5rem"
+                  height="2.5rem"
+                  fill="currentColor"
+                  class="bi bi-graph-up-arrow text-primary"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z"
+                  />
+                </svg>
+                <h5 class="card-title font-weight-bold">
+                  Convert Digital Currency
+                </h5>
+                <p class="card-text text-muted">
+                  Open Funder makes it ease to convert digital currency. BTC ->
+                  ETH, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Bootstrap row-->
+    <div class="container-fluid py-5 jumbotron">
+      <div class="container p-5 text-center">
+        <h2 class="font-weight-bold my-3">
+          Auto-generate, publish, and measure all in one.
+        </h2>
+        <p class="">
+          Growing an inspiring brand is a key success factor for your business.
+          Agencies, Large corporations and non-profits all need to embrace the
+          processes and power of social media to foster brand success.
+        </p>
+      </div>
+    </div>
+
+    <!--Bootstrap columns and rows-->
+    <div class="container p-10 my-5 text-center" id="features">
+      <h2 class="font-weight-bold my-3">Software Features</h2>
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-clipboard-data"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M9.5 1h-3a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"
+              />
+              <path
+                d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Manage ads and organic posts in one dashboard
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-easel"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8.473.337a.5.5 0 0 0-.946 0L6.954 2h2.092L8.473.337zM12.15 11h-1.058l1.435 4.163a.5.5 0 0 0 .946-.326L12.15 11zM8.5 11h-1v2.5a.5.5 0 0 0 1 0V11zm-3.592 0H3.85l-1.323 3.837a.5.5 0 1 0 .946.326L4.908 11z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M14 3H2v7h12V3zM2 2a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H2z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">Ad and post mock-ups prior to posting</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-people"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1h7.956a.274.274 0 0 0 .014-.002l.008-.002c-.002-.264-.167-1.03-.76-1.72C13.688 10.629 12.718 10 11 10c-1.717 0-2.687.63-3.24 1.276-.593.69-.759 1.457-.76 1.72a1.05 1.05 0 0 0 .022.004zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10c-1.668.02-2.615.64-3.16 1.276C1.163 11.97 1 12.739 1 13h3c0-1.045.323-2.086.92-3zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">Commenting system for collaborative review</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-calendar-week"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+              />
+              <path
+                d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Automate publishing for Twitter, Facebook, and more
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-badge-ad"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M14 3H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"
+              />
+              <path
+                d="M3.7 11l.47-1.542h2.004L6.644 11h1.261L5.901 5.001H4.513L2.5 11h1.2zm1.503-4.852l.734 2.426H4.416l.734-2.426h.053zm4.759.128c-1.059 0-1.753.765-1.753 2.043v.695c0 1.279.685 2.043 1.74 2.043.677 0 1.222-.33 1.367-.804h.057V11h1.138V4.685h-1.16v2.36h-.053c-.18-.475-.68-.77-1.336-.77zm.387.923c.58 0 1.002.44 1.002 1.138v.602c0 .76-.396 1.2-.984 1.2-.598 0-.972-.449-.972-1.248v-.453c0-.795.37-1.24.954-1.24z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Automate Facebook Ads, Instagram Ads, and Google Ads
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-bullseye"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 13A5 5 0 1 0 8 3a5 5 0 0 0 0 10zm0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"
+              />
+              <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Set targets and goals for objective-driven campaigns
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-calendar-check"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0z"
+              />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Master calenders along with list and calender views
+          </p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 my-3">
+          <div class="numberCircle m-auto">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 16 16"
+              class="bi bi-mailbox"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 4a3 3 0 0 0-3 3v6h6V7a3 3 0 0 0-3-3zm0-1h8a4 4 0 0 1 4 4v6a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7a4 4 0 0 1 4-4zm2.646 1A3.99 3.99 0 0 1 8 7v6h7V7a3 3 0 0 0-3-3H6.646z"
+              />
+              <path
+                fill-rule="evenodd"
+                d="M11.793 8.5H9v-1h5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.354-.146l-.853-.854z"
+              />
+              <path d="M5 7c0 .552-.448 0-1 0s-1 .552-1 0a1 1 0 0 1 2 0z" />
+            </svg>
+          </div>
+          <p class="text-muted">
+            Central notifications sent to a designated email
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!--Bootstrap columns-->
+    <div class="container p-10 mt-5" id="contact">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 my-auto my-3">
+          <h2 class="font-weight-bold my-3">Interested in leaning more?</h2>
+          <p class="text-muted">
+            Please feel free to contact us via phone or email. We are always
+            happy to answer any of your questions.
+            <br />
+            <br />
+            Please write your name, email address and a message below if you
+            have any questions. One of our staff members will be happy to
+            contact you directly and answer your questions as soon as possible.
+          </p>
+          <div class="row p-3">
+            <div class="col-1">
+              <svg
+                width="1.5em"
+                height="1.5em"
+                viewBox="0 0 16 16"
+                class="bi bi-telephone text-success"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"
+                />
+              </svg>
+            </div>
+            <div class="col-11">
+              <a href="tel:0000000000" class="text-success">000-000-0000</a>
+            </div>
+          </div>
+          <div class="row p-3">
+            <div class="col-1">
+              <svg
+                width="1.5em"
+                height="1.5em"
+                viewBox="0 0 16 16"
+                class="bi bi-envelope text-success"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"
+                />
+              </svg>
+            </div>
+            <div class="col-11">
+              <a href="mailto:info@website.com" class="text-success">
+                info@website.com
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12 my-3">
+          <div class="card shadow p-2">
+            <div class="card-body">
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputFirstName"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="inputLastName"
+                    />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputEmail">Email</label>
+                  <input type="text" class="form-control" id="inputEmail" />
+                </div>
+                <div class="form-group">
+                  <label for="inputMessage">Message</label>
+                  <textarea class="form-control" id="inputMessage"></textarea>
+                </div>
+                <div class="form-group">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="gridCheck"
+                      checked
+                    />
+                    <label class="form-check-label" for="gridCheck">
+                      I agree to the Privacy Policy and Terms and Conditions of
+                      this site.
+                    </label>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-outline-success btn-block">
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <div class="p-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <path
+          fill="#28A745"
+          fill-opacity="1"
+          d="M0,224L120,240C240,256,480,288,720,282.7C960,277,1200,235,1320,213.3L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        ></path>
+      </svg>
+    </div>
+    <div class="container-fluid text-center py-3 bg-success">
+      <p class="text-light">
+        <a href="/privacy-policy" class="text-light" title="Privacy Policy">
+          Privacy Policy
+        </a>
+        |
+        <a
+          href="/terms-conditions"
+          class="text-light"
+          title="Terms and Conditions"
+        >
+          Terms and Conditions
+        </a>
+        |
+        <a href="/cookie-policy" class="text-light" title="Cookie Policy">
+          Cookie Policy
+        </a>
+      </p>
+      <p class="text-light">© 2020. All Rights Reserved.</p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
